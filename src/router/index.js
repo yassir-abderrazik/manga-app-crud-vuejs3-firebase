@@ -1,11 +1,35 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Manga from '../views/Manga.vue'
+import ShowManga from '../views/ShowManga.vue'
+import CreateManga from '../views/CreateManga.vue'
+import UpdateManga from '../views/UpdateManga.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/manga',
+    name: 'manga',
+    component:  Manga
+  },
+  {
+    path: '/manga/:id/:slug',
+    name: 'showManga',
+    component:  ShowManga
+  },
+  {
+    path: '/manga/:id/:slug/update',
+    name: 'updateManga',
+    component:  UpdateManga
+  },
+  {
+    path: '/manga/create',
+    name: 'createManga',
+    component:  CreateManga
   },
   {
     path: '/about',
